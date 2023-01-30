@@ -4,30 +4,40 @@ import Empty from './Empty';
 import O from './O';
 
 function Table() {
-  const [field, setField] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8]);
-  const [starting, setStarting] = useState(false);
+  const [field, setField]: any = useState({
+    // eslint-disable-next-line object-property-newline
+    a: <Empty />, b: <Empty />, c: <Empty />, // eslint-disable-next-line object-property-newline
+    d: <Empty />, e: <Empty />, f: <Empty />, // eslint-disable-next-line object-property-newline
+    g: <Empty />, h: <Empty />, i: <Empty />,
+  });
+  const [letter, setLetter] = useState('');
+  const [start, setStart] = useState(false);
 
-  const cells = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+  const squareField = Object.keys(field);
 
-  function change() {
-    setField(O);
+  function change(square: string) {
+    setField({ ...field, [square]: <O /> });
   }
 
   function startGame() {
-    setStarting(true);
+    setStart(true);
   }
+  return (
+    <div>
+      <button type="button" onChange={startGame}>Iniciar o jogo</button>
+      { squareField.map((square) => (
+        <div
+          role="presentation"
+          key={square}
+          id={square}
+          onClick={() => change(square)}
+        >
+          {field[square]}
+        </div>
+      )) }
+    </div>
 
-  if (!starting) {
-    return (
-      <div>
-        <button type="button" onClick={startGame}>Clique para iniciar o jogo</button>
-        { cells.map((i) => (
-          <div role="presentation" key={i} onClick={change} className="table-game"><Empty /></div>
-        )) }
-      </div>
-
-    );
-  }
+  );
 
   return <div>oii</div>;
 }
