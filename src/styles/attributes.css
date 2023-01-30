@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.white-square {
+  background-color: white;
+  border: solid 2px black;
+  max-width: 100%;
+}
+
+div {
+  width: 350px;
+  height: 350px;
+}
+
+.table-game{
+  text-decoration: none;
+}
