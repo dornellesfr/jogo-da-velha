@@ -3,22 +3,46 @@
   padding: 0;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-game {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80vh;
+  height: 80vh;
+  margin: 10vh 10vh;
+  border: solid red 3px;
+  min-height: 300px;
+  min-width: 300px;
+  max-height: 1200px;
+  max-width: 1200px;
+}
+
 img {
+  border: solid yellow 4px;
   max-width: 100%;
+  max-height: 100%;
+  width: 80%;
+
   display: block;
 }
 
-.white-square {
+.empty-square {
   background-color: white;
   border: solid 2px black;
   max-width: 100%;
 }
 
-div {
-  width: 350px;
-  height: 350px;
-}
-
-.table-game{
-  text-decoration: none;
+.item-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid green 3px;
+  width: 31%;
+  height: 32.66%;
 }

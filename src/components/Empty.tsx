@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/attributes.css';
 
 function Empty() {
-  return <div className="white-square" />;
+  return <div />;
 }
 
 export default Empty;
