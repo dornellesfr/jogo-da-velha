@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Table from './components/Table';
+import './styles/attributes.css';
 
 function App() {
-  const [start, setStart] = useState(false);
-
-  function startGame() {
-    setStart(true);
-  }
-
   return (
-    <div>
+    <div className="container">
       <h1>Jogo da velha</h1>
-      <button type="button" onClick={startGame}>Iniciar o jogo</button>
-      <Table start={start} />
+      <Table />
     </div>
   );
 }
