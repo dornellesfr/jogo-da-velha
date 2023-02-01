@@ -23,15 +23,6 @@ function Table() {
   const [playsO, setPlaysO]: any = useState([]);
   const [statusPlay, setStatusPlay] = useState(true);
 
-  // function getDraw() {
-  //   const all = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  // }
-
-  // function getWinner() {
-  //   if (includesArray(playsX, positionsToWin)) { setStatusPlay(false); }
-  //   if (includesArray(playsO, positionsToWin)) { setStatusPlay(false); }
-  // }
-
   useEffect(() => {
     const positionsToWin = [
       [0, 1, 2], [3, 4, 5], [6, 7, 8],
