@@ -1,51 +1,114 @@
-* {
-  margin: 0;
-  padding: 0;
+@media only screen and (min-width: 681px) {
+  * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: underline;
+  }
+  
+  .table-game {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80vh;
+    height: 80vh;
+    margin: 10vh 10vh;
+    min-height: 200px;
+    min-width: 200px;
+    max-height: 1200px;
+    max-width: 1200px;
+  }
+  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 80%;
+    display: block;
+    background-color: white;
+  }
+  
+  .item-table {
+    display: flex;
+    justify-content: center;
+    border: solid black 6px;
+    align-items: center;
+    width: 31%;
+    height: 32.66%;
+  }
+
+  button {
+    font-size: 25px;
+    margin-top: 5vh;
+    background-color: black;
+    color: white;
+    border-style: none;
+    padding: 6px;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background-color: rgb(44, 44, 44);
+    color: rgb(255, 255, 255);
+  }
 }
 
-.container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.table-game {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 80vh;
-  height: 80vh;
-  margin: 10vh 10vh;
-  border: solid red 3px;
-  min-height: 300px;
-  min-width: 300px;
-  max-height: 1200px;
-  max-width: 1200px;
-}
-
-img {
-  border: solid yellow 4px;
-  max-width: 100%;
-  max-height: 100%;
-  width: 80%;
-
-  display: block;
-}
-
-.empty-square {
-  background-color: white;
-  border: solid 2px black;
-  max-width: 100%;
-}
-
-.item-table {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: solid green 3px;
-  width: 31%;
-  height: 32.66%;
+@media only screen and (max-width: 680px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .table-game {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 80%;
+    margin: 10vh 10vh;
+    min-height: 200px;
+    min-width: 200px;
+    max-height: 1200px;
+    max-width: 1200px;
+  }
+  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 80%;
+    display: block;
+  }
+  
+  .empty-square {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .item-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid black 4px;
+    width: 31%;
+    height: 32.66%;
+  }
 }

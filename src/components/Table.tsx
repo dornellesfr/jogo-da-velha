@@ -7,7 +7,7 @@ import TableComponents from '../utils/interfaces/fields.interface';
 import includesArray from '../utils/includesArrays';
 
 function Table() {
-  const [fields, setField] = useState([
+  const initialState = [
     { square: <Empty />, id: 0, ocuppied: 0 },
     { square: <Empty />, id: 1, ocuppied: 0 },
     { square: <Empty />, id: 2, ocuppied: 0 },
@@ -17,7 +17,9 @@ function Table() {
     { square: <Empty />, id: 6, ocuppied: 0 },
     { square: <Empty />, id: 7, ocuppied: 0 },
     { square: <Empty />, id: 8, ocuppied: 0 },
-  ]);
+  ];
+
+  const [fields, setField] = useState(initialState);
   const [count, setCount] = useState(0);
   const [playsX, setPlaysX]: any = useState([]);
   const [playsO, setPlaysO]: any = useState([]);
@@ -63,20 +65,31 @@ function Table() {
     markWithXorO(payload);
   }
 
-  return (
-    <div className="table-game">
-      { fields.map(({ square, id }: any) => (
-        <div
-          className="item-table"
-          role="presentation"
-          key={id}
-          onClick={() => makeAPlay(id)}
-        >
-          { square }
-        </div>
-      )) }
-    </div>
+  function restartGame() {
+    setField(initialState);
+    setCount(0);
+    setPlaysX([]);
+    setPlaysO([]);
+    setStatusPlay(true);
+  }
 
+  return (
+    <div className="container">
+      <h1>JOGO DA VELHA</h1>
+      <button type="button" onClick={restartGame}>Reinicie o jogo</button>
+      <div className="table-game">
+        { fields.map(({ square, id }: any) => (
+          <div
+            className="item-table"
+            role="presentation"
+            key={id}
+            onClick={() => makeAPlay(id)}
+          >
+            { square }
+          </div>
+        )) }
+      </div>
+    </div>
   );
 }
 
