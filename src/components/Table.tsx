@@ -75,8 +75,9 @@ function Table() {
 
   return (
     <div className="container">
-      <h1>JOGO DA VELHA</h1>
-      <button type="button" onClick={restartGame}>Reinicie o jogo</button>
+      <nav>
+        <h1 className="title">JOGO DA VELHA</h1>
+      </nav>
       <div className="table-game">
         { fields.map(({ square, id }: any) => (
           <div
@@ -89,6 +90,7 @@ function Table() {
           </div>
         )) }
       </div>
+      <button className="button" type="button" onClick={restartGame}>Reinicie o jogo</button>
     </div>
   );
 }
