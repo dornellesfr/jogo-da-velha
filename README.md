@@ -41,6 +41,10 @@ npm start
 
 5. O jogo da velha deve estar rodando no link [http://localhost:3000](http://localhost:3000) no seu browser.
 
+
+## [Clique aqui](https://jogo-da-velha-inky.vercel.app/) para visualizar e utilizar o projeto sem precisar clonar.
+
+
 ## Contribuições
 
 Se você quiser contribuir com este respositório, faça um fork e mande suas alterações com pull requests.
